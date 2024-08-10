@@ -58,11 +58,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['update_status'])) {
 
                         <div class="app-utilities col-auto">
                             <div class="app-utility-item app-user-dropdown dropdown">
-                                <a class="dropdown-toggle" id="user-dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><img src="assets/images/user.png" alt="user profile"></a>
-                                <ul class="dropdown-menu" aria-labelledby="user-dropdown-toggle">
-                                    <li><a class="dropdown-item" href="login.html">Log Out</a></li>
-                                </ul>
-                            </div><!--//app-user-dropdown-->
+								<a class="dropdown-toggle" id="user-dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+								</a>
+								<ul class="dropdown-menu" aria-labelledby="user-dropdown-toggle">
+									<li><a class="dropdown-item" href="#" onclick="confirmLogout()">Log Out</a></li>
+								</ul>
+							</div><!--//app-user-dropdown-->
                         </div><!--//app-utilities-->
                     </div><!--//row-->
                 </div><!--//app-header-content-->
@@ -73,7 +74,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['update_status'])) {
             <div class="sidepanel-inner d-flex flex-column">
                 <a href="#" id="sidepanel-close" class="sidepanel-close d-xl-none">&times;</a>
                 <div class="app-branding">
-                    <a class="app-logo" href="koki_dashboard.php"><img class="logo-icon me-2" src="assets/images/app-logo.svg" alt="logo"><span class="logo-text">PORTAL</span></a>
+                    <a class="app-logo" href="koki_dashboard.php"><span class="logo-text">Koki</span></a>
 
                 </div><!--//app-branding-->
 
@@ -103,7 +104,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['update_status'])) {
                                         <circle cx="3.5" cy="10.5" r=".5" />
                                     </svg>
                                 </span>
-                                <span class="nav-link-text">pesnannnn</span>
+                                <span class="nav-link-text">pesanan</span>
                             </a><!--//nav-link-->
                         </li><!--//nav-item-->
                         <li class="nav-item">
@@ -222,7 +223,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['update_status'])) {
 
     <!-- Page Specific JS -->
     <script src="assets/js/app.js"></script>
-
+    <script>
+		function confirmLogout() {
+			if (confirm("Apakah Anda yakin ingin keluar?")) {
+				window.location.href = 'index.php';
+			}
+		}
+	</script>
 </body>
 
 </html>

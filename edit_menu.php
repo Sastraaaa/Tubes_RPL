@@ -77,15 +77,14 @@ $result = $conn->query($sql);
 <html lang="en">
 
 <head>
-    <title>Portal - Bootstrap 5 Admin Dashboard Template For Developers</title>
+    <title>Edit Menu</title>
 
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Portal - Bootstrap 5 Admin Dashboard Template For Developers">
-    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
+    <meta name="description" content="Edit Menu">
     <link rel="shortcut icon" href="favicon.ico">
 
     <!-- FontAwesome JS-->
@@ -114,11 +113,12 @@ $result = $conn->query($sql);
 
                         <div class="app-utilities col-auto">
                             <div class="app-utility-item app-user-dropdown dropdown">
-                                <a class="dropdown-toggle" id="user-dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><img src="assets/images/user.png" alt="user profile"></a>
-                                <ul class="dropdown-menu" aria-labelledby="user-dropdown-toggle">
-                                    <li><a class="dropdown-item" href="login.html">Log Out</a></li>
-                                </ul>
-                            </div><!--//app-user-dropdown-->
+								<a class="dropdown-toggle" id="user-dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+								</a>
+								<ul class="dropdown-menu" aria-labelledby="user-dropdown-toggle">
+									<li><a class="dropdown-item" href="#" onclick="confirmLogout()">Log Out</a></li>
+								</ul>
+							</div><!--//app-user-dropdown-->
                         </div><!--//app-utilities-->
                     </div><!--//row-->
                 </div><!--//app-header-content-->
@@ -129,7 +129,7 @@ $result = $conn->query($sql);
             <div class="sidepanel-inner d-flex flex-column">
                 <a href="#" id="sidepanel-close" class="sidepanel-close d-xl-none">&times;</a>
                 <div class="app-branding">
-                    <a class="app-logo" href="koki_dashboard.php"><img class="logo-icon me-2" src="assets/images/app-logo.svg" alt="logo"><span class="logo-text">PORTAL</span></a>
+                    <a class="app-logo" href="koki_dashboard.php"><span class="logo-text">Edit Menu</span></a>
 
                 </div><!--//app-branding-->
 
@@ -159,7 +159,7 @@ $result = $conn->query($sql);
                                         <circle cx="3.5" cy="10.5" r=".5" />
                                     </svg>
                                 </span>
-                                <span class="nav-link-text">pesanannn</span>
+                                <span class="nav-link-text">pesanan</span>
                             </a><!--//nav-link-->
                         </li><!--//nav-item-->
                         <li class="nav-item">
@@ -277,6 +277,14 @@ $result = $conn->query($sql);
     <script src="assets/js/edit_menu.js"></script>
     <!-- Page Specific JS -->
     <script src="assets/js/app.js"></script>
+     <!-- Logout Function -->
+    <script>
+		function confirmLogout() {
+			if (confirm("Apakah Anda yakin ingin keluar?")) {
+				window.location.href = 'index.php';
+			}
+		}
+	</script>
 
 </body>
 
